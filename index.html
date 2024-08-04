@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavani Potupureddy - Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #4a148c;
+            --secondary-color: #7c43bd;
+            --background-color: #f5f5f5;
+            --button-color: #9c74ce;
+            --text-color: #333;
+            --card-bg-color: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+} 
+
+.header-scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* More prominent background */
+    color: var(--text-color); /* Change text color */
+    backdrop-filter: blur(10px); /* Maintain the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+.header-scrolled nav ul li a {
+    color: var(--text-color); /* Change link color */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(74, 20, 140, 0.9), rgba(124, 67, 189, 0.9)), url('https://source.unsplash.com/random/1920x1080?technology') no-repeat center center/cover;
+            color: #fff;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--button-color);
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        #resume {
+            background-color: var(--card-bg-color);
+            color: var(--text-color);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+       
+        #resume h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        #resume p {
+            margin-bottom: 2rem;
+        }
+
+        .resume-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem; /* Slightly smaller padding */
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .resume-btn:hover {
+            background-color: #7342dc;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bhavani Potupureddy</h1>
+            <p>Electronics and Communication Engineering Student</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>Dedicated and driven 4th-year Electronics and Communication Engineering student with a keen interest and expertise in IoT (Internet of Things) and Embedded Systems. Equipped with a strong academic background and practical experience, I am adept at merging theoretical knowledge with hands-on skills to tackle real-world engineering challenges.</p>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Frontend Development Intern</h3>
+                    <p>Talent Serve</p>
+                    <ul>
+                        <li>Developed Hotel Reservation System using HTML5, CSS3, and JavaScript</li>
+                        <li>Collaborated with UX designers to implement user-friendly designs</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Web Designing Intern</h3>
+                    <p>SUG Creative</p>
+                    <ul>
+                        <li>Created visually appealing layouts for client websites</li>
+                        <li>Optimized website performance and user experience</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Control Systems Intern</h3>
+                    <p>DRDO</p>
+                    <ul>
+                        <li>Assisted in the development of control systems for defense applications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Website Enhancement for Young Compete</h3>
+                    <p>HTML, CSS, JavaScript, WIX, UI/UX</p>
+                    <ul>
+                        <li>Optimized website performance, resulting in a 20% increase in page load speed</li>
+                        <li>Added tools for students, such as PDF tools, development tools, and study resources</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Home Server Using Raspberry Pi</h3>
+                    <p>Raspberry Pi, Linux</p>
+                    <ul>
+                        <li>Built a home server running locally on a Raspberry Pi using Linux OS</li>
+                        <li>Implemented file sharing, media streaming, and local web hosting capabilities</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Cinematic Search</h3>
+                    <p>HTML, CSS, JavaScript, OMDb API</p>
+                    <ul>
+                        <li>Created a universal movie search website allowing users to discover movies from various genres and eras</li>
+                        <li>Implemented dynamic search functionality with the OMDb API, providing real-time results and detailed movie information</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills & Certifications</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Programming Languages</h3>
+                    <p>C, C++, JavaScript, HTML5, CSS3</p>
+                </div>
+                <div class="card">
+                    <h3>Technical Skills</h3>
+                    <p>IoT, Embedded Systems, Cyber Security, Data Analysis, Git & Github</p>
+                </div>
+                <div class="card">
+                    <h3>Tools & Frameworks</h3>
+                    <p>Arduino, ARM</p>
+                </div>
+                <div class="card">
+                    <h3>Business Skills</h3>
+                    <p>Digital Marketing, Project Management, Market Research</p>
+                </div>
+                <div class="card">
+                    <h3>Certifications</h3>
+                    <p>Cyber Security Threats, Digital Skills: AI, SEO Fundamentals, Data Visualization, Branding, Elements of AI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2 class="section-title">Achievements & Activities</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Awards</h3>
+                    <ul>
+                        <li>SUG Excellence Award for Academic Performance</li>
+                        <li>Tutelage Endeavor Medal for Project Innovation</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Leadership</h3>
+                    <p>Execom Member of IEEE Gitam Student Branch, organizing technical workshops and seminars</p>
+                </div>
+                <div class="card">
+                    <h3>Volunteering</h3>
+                    <p>Active Member of NSS Gitam, participated in community service and environmental initiatives</p>
+                </div>
+                <div class="card">
+                    <h3>Interests</h3>
+                    <p>Mindfulness and meditation, Classical Indian dance, Tech blogging</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="section">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            <p>View my full resume to know more about my education, skills, and experience.</p>
+            <a href="#" class="resume-btn" onclick="viewResume()">View Resume</a>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="card">
+                <p>Email: bpotupur@gitam.in</p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/bhavani-potupureddy" target="_blank">linkedin.com/in/bhavani-potupureddy</a></p>
+                <p>GitHub: <a href="https://github.com/bhavani-potupureddy" target="_blank">github.com/bhavani-potupureddy</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bhavani Potupureddy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function viewResume() {
+            const resumeUrl = 'bhavani_resume.pdf';
+            window.open(resumeUrl, '_blank');
+        }
+
+        window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 860) { // Adjust this value as needed
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+    });
+    </script>
+</body>
+</html>
